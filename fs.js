@@ -43,3 +43,16 @@ const fs = require('fs')
 // })
 
 
+//  Wriiting functions according to blocking and Non blocking I/O module
+
+//blocking:
+console.log('this is a blocking function')
+const blocking = fs.writeFileSync('datasync.txt','hi I am areeba kabir')
+console.log('file written successfully')
+
+//non-blocking :
+console.log('this is non blocking')
+fs.writeFile('dataasync.txt','I am Areeba Kabir from Siftware Engineering.',(err,res)=>{
+    console.log("data written successfully!")
+})
+console.log('non-blocking is done!')
